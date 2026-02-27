@@ -258,8 +258,8 @@
 
         .diagram {
             position: relative;
-            width: 440px;
-            height: 420px;
+            width: 460px;
+            height: 470px;
         }
 
         /* SVG connector lines */
@@ -273,7 +273,7 @@
 
         .d-center {
             position: absolute;
-            top: 210px; left: 220px;
+            top: 235px; left: 230px;
             transform: translate(-50%, -50%);
             width: 100px; height: 100px;
             background: #fff;
@@ -327,12 +327,13 @@
             white-space: nowrap;
         }
 
-        /* Pentagon positions (all use translate(-50%,-50%) so top/left = node center) */
-        .d-node-top          { top: 45px;  left: 220px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 0s; }
-        .d-node-top-right    { top: 152px; left: 367px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 0.64s; }
-        .d-node-bottom-right { top: 325px; left: 311px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 1.28s; }
-        .d-node-bottom-left  { top: 325px; left: 129px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 1.92s; }
-        .d-node-top-left     { top: 152px; left: 73px;  transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 2.56s; }
+        /* Hexagon positions — center (230,235), radius 160px, 60° steps from top */
+        .d-node-top          { top:  75px; left: 230px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 0s; }
+        .d-node-top-right    { top: 155px; left: 369px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 0.53s; }
+        .d-node-bottom-right { top: 315px; left: 369px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 1.07s; }
+        .d-node-bottom       { top: 395px; left: 230px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 1.6s; }
+        .d-node-bottom-left  { top: 315px; left:  91px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 2.13s; }
+        .d-node-top-left     { top: 155px; left:  91px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 2.67s; }
 
         @keyframes floatNode {
             0%,100% { transform: translate(-50%,-50%) translateY(0); }
