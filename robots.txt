@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chipper-cat-ca9e4f.netlify.app/sitemap.xml
