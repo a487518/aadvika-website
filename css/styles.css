@@ -258,44 +258,22 @@
 
         .diagram {
             position: relative;
-            width: 400px;
-            height: 400px;
+            width: 440px;
+            height: 420px;
         }
 
-        /* Dashed connector lines */
-        .diagram::before {
-            content: '';
+        /* SVG connector lines */
+        .diagram-lines {
             position: absolute;
-            top: 95px; bottom: 95px;
-            left: 50%;
-            width: 2px;
-            transform: translateX(-50%);
-            background: repeating-linear-gradient(
-                to bottom,
-                rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 6px,
-                transparent 6px, transparent 12px
-            );
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             z-index: 0;
-        }
-
-        .diagram::after {
-            content: '';
-            position: absolute;
-            left: 95px; right: 95px;
-            top: 50%;
-            height: 2px;
-            transform: translateY(-50%);
-            background: repeating-linear-gradient(
-                to right,
-                rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 6px,
-                transparent 6px, transparent 12px
-            );
-            z-index: 0;
+            overflow: visible;
         }
 
         .d-center {
             position: absolute;
-            top: 50%; left: 50%;
+            top: 210px; left: 220px;
             transform: translate(-50%, -50%);
             width: 100px; height: 100px;
             background: #fff;
@@ -349,18 +327,16 @@
             white-space: nowrap;
         }
 
-        .d-node-top    { top: 0; left: 50%; transform: translateX(-50%); animation: floatV 3.2s ease-in-out infinite 0s; }
-        .d-node-bottom { bottom: 0; left: 50%; transform: translateX(-50%); animation: floatV 3.2s ease-in-out infinite 0.8s; }
-        .d-node-left   { left: 0; top: 50%; transform: translateY(-50%); animation: floatH 3.2s ease-in-out infinite 1.6s; }
-        .d-node-right  { right: 0; top: 50%; transform: translateY(-50%); animation: floatH 3.2s ease-in-out infinite 2.4s; }
+        /* Pentagon positions (all use translate(-50%,-50%) so top/left = node center) */
+        .d-node-top          { top: 45px;  left: 220px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 0s; }
+        .d-node-top-right    { top: 152px; left: 367px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 0.64s; }
+        .d-node-bottom-right { top: 325px; left: 311px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 1.28s; }
+        .d-node-bottom-left  { top: 325px; left: 129px; transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 1.92s; }
+        .d-node-top-left     { top: 152px; left: 73px;  transform: translate(-50%,-50%); animation: floatNode 3.2s ease-in-out infinite 2.56s; }
 
-        @keyframes floatV {
-            0%,100% { transform: translateX(-50%) translateY(0); }
-            50%      { transform: translateX(-50%) translateY(-9px); }
-        }
-        @keyframes floatH {
-            0%,100% { transform: translateY(-50%) translateX(0); }
-            50%      { transform: translateY(-50%) translateX(-7px); }
+        @keyframes floatNode {
+            0%,100% { transform: translate(-50%,-50%) translateY(0); }
+            50%      { transform: translate(-50%,-50%) translateY(-8px); }
         }
 
         /* ── STATS BAR ── */
