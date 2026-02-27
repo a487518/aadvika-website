@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadvika Pvt Ltd - Enterprise Integration Experts</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-28LKVSZFWF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-28LKVSZFWF');
+    </script>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy:   #1e3a8a;
+            --blue:   #1d4ed8;
+            --accent: #3b82f6;
+            --light:  #60a5fa;
+            --bg:     #f0f4ff;
+            --dark:   #1e293b;
+            --muted:  #64748b;
+            --border: #e2e8f0;
+            --card-shadow:       0 4px 24px rgba(30,58,138,0.09);
+            --card-shadow-hover: 0 12px 40px rgba(30,58,138,0.18);
+            --gradient: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 55%, #3b82f6 100%);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+            background: #fff;
+        }
+
+        /* ── HEADER ── */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 30, 80, 0.97);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.9rem 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        .logo-wordmark {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-name {
+            color: white;
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .logo-pvt {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.75rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.78);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.93rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: #fff; }
+
+        .nav-cta {
+            background: var(--accent) !important;
+            color: #fff !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            transition: background 0.2s, transform 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: #2563eb !important;
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: var(--gradient);
+            color: #fff;
+            padding: 155px 2rem 110px;
+            position: relative;
+            overflow: hidden;
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            background: white;
+            opacity: 0.06;
+        }
+
+        .hero-blob-1 { width: 650px; height: 650px; top: -220px; right: -160px; }
+        .hero-blob-2 { width: 420px; height: 420px; bottom: -160px; left: -110px; }
+        .hero-blob-3 { width: 180px; height: 180px; top: 38%; right: 28%; opacity: 0.04; }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+            color: rgba(255,255,255,0.92);
+            padding: 0.38rem 1rem;
+            border-radius: 50px;
+            font-size: 0.83rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.1rem;
+            font-weight: 800;
+            line-height: 1.18;
+            margin-bottom: 1.4rem;
+            letter-spacing: -0.8px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--light);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.88;
+            line-height: 1.75;
+            margin-bottom: 2.4rem;
+            max-width: 500px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            display: inline-block;
+            background: #fff;
+            color: var(--navy);
+            padding: 0.85rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.97rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+        }
+
+        .btn-ghost {
+            display: inline-block;
+            background: transparent;
+            color: #fff;
+            padding: 0.85rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.97rem;
+            border: 2px solid rgba(255,255,255,0.42);
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .btn-ghost:hover {
+            border-color: #fff;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Integration diagram */
+        .hero-diagram {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .diagram {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .d-center {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 88px; height: 88px;
+            background: #fff;
+            border-radius: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+            z-index: 2;
+            gap: 3px;
+        }
+
+        .d-center-icon { font-size: 1.9rem; }
+
+        .d-center-label {
+            font-size: 0.62rem;
+            font-weight: 800;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .d-node {
+            position: absolute;
+            width: 60px; height: 60px;
+            background: rgba(255,255,255,0.14);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.28);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.55rem;
+        }
+
+        .d-node:nth-child(2) { top: 4px; left: 50%; transform: translateX(-50%); animation: floatV 3.2s ease-in-out infinite 0s; }
+        .d-node:nth-child(3) { bottom: 4px; left: 50%; transform: translateX(-50%); animation: floatV 3.2s ease-in-out infinite 0.8s; }
+        .d-node:nth-child(4) { left: 4px; top: 50%; transform: translateY(-50%); animation: floatH 3.2s ease-in-out infinite 1.6s; }
+        .d-node:nth-child(5) { right: 4px; top: 50%; transform: translateY(-50%); animation: floatH 3.2s ease-in-out infinite 2.4s; }
+
+        @keyframes floatV {
+            0%,100% { transform: translateX(-50%) translateY(0); }
+            50%      { transform: translateX(-50%) translateY(-9px); }
+        }
+        @keyframes floatH {
+            0%,100% { transform: translateY(-50%) translateX(0); }
+            50%      { transform: translateY(-50%) translateX(-7px); }
+        }
+
+        /* ── STATS BAR ── */
+        .stats-bar {
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(30,58,138,0.07);
+        }
+
+        .stats-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 2.5rem 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0.5rem 1rem;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat-item:last-child { border-right: none; }
+
+        .stat-num {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1;
+            margin-bottom: 0.35rem;
+        }
+
+        .stat-lbl {
+            color: var(--muted);
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        /* ── SECTION BASE ── */
+        section { padding: 90px 2rem; }
+
+        .sec-tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: var(--blue);
+            font-size: 0.77rem;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            padding: 0.32rem 0.9rem;
+            border-radius: 50px;
+            margin-bottom: 0.9rem;
+        }
+
+        .sec-title {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+            margin-bottom: 0.85rem;
+        }
+
+        .sec-sub {
+            color: var(--muted);
+            font-size: 1rem;
+            max-width: 540px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .sec-header { text-align: center; }
+
+        /* ── TECHNOLOGIES ── */
+        .technologies { background: var(--bg); }
+
+        .tech-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tech-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid #e8eeff;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .tech-logo-wrap {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.4rem;
+        }
+
+        .tech-logo {
+            max-height: 68px;
+            max-width: 155px;
+            object-fit: contain;
+        }
+
+        .tech-card h3 {
+            color: var(--navy);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+        }
+
+        .tech-card p {
+            color: var(--muted);
+            font-size: 0.93rem;
+            line-height: 1.65;
+        }
+
+        /* ── SERVICES ── */
+        .services { background: #fff; }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .svc-card {
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid #e8eeff;
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+
+        .svc-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 100%;
+            background: var(--gradient);
+        }
+
+        .svc-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--card-shadow-hover);
+            background: #fff;
+        }
+
+        .svc-icon {
+            width: 50px; height: 50px;
+            background: #dbeafe;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.45rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .svc-card h3 {
+            color: var(--navy);
+            font-size: 1.08rem;
+            font-weight: 700;
+            margin-bottom: 0.65rem;
+        }
+
+        .svc-card p {
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+
+        /* ── PROCESS ── */
+        .process { background: var(--bg); }
+
+        .process-steps {
+            max-width: 860px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 29px;
+            left: calc(12.5% + 22px);
+            right: calc(12.5% + 22px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--light));
+        }
+
+        .p-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .p-num {
+            width: 58px; height: 58px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin: 0 auto 1.2rem;
+            box-shadow: 0 4px 18px rgba(30,58,138,0.28);
+        }
+
+        .p-step h3 {
+            color: var(--navy);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.45rem;
+        }
+
+        .p-step p {
+            color: var(--muted);
+            font-size: 0.87rem;
+            line-height: 1.55;
+        }
+
+        /* ── PROJECTS ── */
+        .projects { background: #fff; }
+
+        .projects-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .proj-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid #e8eeff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .proj-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .proj-head {
+            background: var(--gradient);
+            color: #fff;
+            padding: 1.6rem 2rem;
+        }
+
+        .proj-cat {
+            font-size: 0.76rem;
+            font-weight: 600;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 0.45rem;
+        }
+
+        .proj-head h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .proj-body {
+            padding: 1.6rem 2rem;
+        }
+
+        .proj-body p {
+            color: var(--muted);
+            font-size: 0.93rem;
+            line-height: 1.65;
+            margin-bottom: 1.2rem;
+        }
+
+        .proj-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+        }
+
+        .tag {
+            background: #dbeafe;
+            color: var(--blue);
+            padding: 0.28rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* ── ABOUT ── */
+        .about { background: var(--bg); }
+
+        .about-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-text .sec-tag { display: inline-block; }
+
+        .about-text h2 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+            margin-bottom: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .about-text p {
+            color: var(--muted);
+            font-size: 0.98rem;
+            line-height: 1.75;
+            margin-bottom: 0.9rem;
+        }
+
+        .value-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            margin-top: 1.4rem;
+        }
+
+        .v-item {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 0.94rem;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .v-check {
+            width: 21px; height: 21px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 0.68rem;
+            flex-shrink: 0;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .a-stat {
+            background: var(--gradient);
+            padding: 1.75rem 1.5rem;
+            border-radius: 16px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .a-stat .num {
+            font-size: 2.1rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.35rem;
+        }
+
+        .a-stat .lbl {
+            font-size: 0.87rem;
+            opacity: 0.8;
+        }
+
+        /* ── CONTACT ── */
+        .contact { background: #fff; }
+
+        .contact-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 2.5rem;
+        }
+
+        .c-info {
+            background: var(--gradient);
+            padding: 2.75rem;
+            border-radius: 20px;
+            color: #fff;
+        }
+
+        .c-info h3 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            margin-bottom: 0.6rem;
+        }
+
+        .c-info > p {
+            opacity: 0.78;
+            font-size: 0.92rem;
+            margin-bottom: 2.4rem;
+        }
+
+        .c-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .c-icon {
+            width: 40px; height: 40px;
+            background: rgba(255,255,255,0.14);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+            flex-shrink: 0;
+        }
+
+        .c-item strong {
+            display: block;
+            font-size: 0.78rem;
+            opacity: 0.65;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 0.15rem;
+        }
+
+        .c-item span { font-size: 0.92rem; }
+
+        .c-form {
+            background: #fff;
+            padding: 2.75rem;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid #e8eeff;
+        }
+
+        .c-form h3 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .c-form > p {
+            color: var(--muted);
+            font-size: 0.88rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .fg { margin-bottom: 1.15rem; }
+
+        .fg label {
+            display: block;
+            margin-bottom: 0.38rem;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .fg input,
+        .fg textarea,
+        .fg select {
+            width: 100%;
+            padding: 0.72rem 0.95rem;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.93rem;
+            color: var(--dark);
+            background: #fff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .fg input:focus,
+        .fg textarea:focus,
+        .fg select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+        }
+
+        .fg textarea {
+            resize: vertical;
+            min-height: 105px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--gradient);
+            color: #fff;
+            padding: 0.95rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.97rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.2s;
+            letter-spacing: 0.2px;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.91;
+            transform: translateY(-1px);
+        }
+
+        /* ── FOOTER ── */
+        footer { background: #0f172a; }
+
+        .footer-top {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .f-brand .logo-name {
+            display: block;
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .f-brand p {
+            color: rgba(255,255,255,0.52);
+            font-size: 0.88rem;
+            line-height: 1.65;
+            max-width: 290px;
+        }
+
+        .f-col h4 {
+            color: #fff;
+            font-size: 0.92rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+
+        .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+
+        .f-col a {
+            color: rgba(255,255,255,0.52);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.2s;
+        }
+
+        .f-col a:hover { color: #fff; }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            font-size: 0.83rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* ── SCROLL ANIMATION ── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 920px) {
+            .hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .hero-diagram { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { margin: 0 auto 2.4rem; }
+            .hero-btns { justify-content: center; }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); }
+            .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+            .stat-item:nth-child(odd) { border-right: 1px solid var(--border); }
+            .stat-item:last-child, .stat-item:nth-last-child(2) { border-bottom: none; }
+            .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: repeat(2, 1fr); }
+            .process-steps::before { display: none; }
+            .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 130px 1.5rem 80px; min-height: auto; }
+            .hero h1 { font-size: 2rem; }
+            section { padding: 65px 1.5rem; }
+            .sec-title { font-size: 1.9rem; }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); padding: 2rem 1.5rem; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: rgba(15, 30, 80, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1.2rem;
+                border-top: 1px solid rgba(255,255,255,0.08);
+            }
+            .nav-links.open { display: flex; }
+            .hamburger { display: flex; }
+            .process-steps { grid-template-columns: 1fr 1fr; }
+            .c-form, .c-info { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+    <nav>
+        <a href="#home" class="logo">
+            <div class="logo-icon">A</div>
+            <div class="logo-wordmark">
+                <span class="logo-name">Aadvika</span>
+                <span class="logo-pvt">Pvt Ltd</span>
+            </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#technologies">Expertise</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+    <div class="hero-inner">
+        <div>
+            <div class="hero-badge">🔗 &nbsp;Enterprise Integration Specialists</div>
+            <h1>Connecting Systems,<br><em>Powering Business</em></h1>
+            <p>Aadvika delivers reliable system-to-system and application-to-application integration — bridging your enterprise applications with speed, security, and scale.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-white">Start a Project</a>
+                <a href="#services" class="btn-ghost">Our Services</a>
+            </div>
+        </div>
+        <div class="hero-diagram">
+            <div class="diagram">
+                <div class="d-node">🏭</div>
+                <div class="d-node">☁️</div>
+                <div class="d-node">📊</div>
+                <div class="d-node">🔌</div>
+                <div class="d-center">
+                    <div class="d-center-icon">🔗</div>
+                    <div class="d-center-label">Aadvika</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── STATS BAR ── -->
+<div class="stats-bar">
+    <div class="stats-inner">
+        <div class="stat-item fade-up">
+            <div class="stat-num">150+</div>
+            <div class="stat-lbl">Projects Delivered</div>
+        </div>
+        <div class="stat-item fade-up">
+            <div class="stat-num">50+</div>
+            <div class="stat-lbl">Enterprise Clients</div>
+        </div>
+        <div class="stat-item fade-up">
+            <div class="stat-num">98%</div>
+            <div class="stat-lbl">Client Satisfaction</div>
+        </div>
+        <div class="stat-item fade-up">
+            <div class="stat-num">24/7</div>
+            <div class="stat-lbl">Support Available</div>
+        </div>
+    </div>
+</div>
+
+<!-- ── TECHNOLOGIES ── -->
+<section class="technologies" id="technologies">
+    <div class="sec-header">
+        <span class="sec-tag">Our Expertise</span>
+        <h2 class="sec-title">Integration Platforms We Master</h2>
+        <p class="sec-sub">Certified expertise across the leading enterprise integration platforms — delivering scalable, battle-tested solutions.</p>
+    </div>
+    <div class="tech-grid">
+        <div class="tech-card fade-up">
+            <div class="tech-logo-wrap">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3X_SQ5EKKrrfJPy-DRVLS4qBPdpaq9HI6tg&s" alt="MuleSoft" class="tech-logo">
+            </div>
+            <h3>MuleSoft</h3>
+            <p>API-led connectivity and enterprise integration with Anypoint Platform for seamless digital transformation and hybrid cloud architectures.</p>
+        </div>
+        <div class="tech-card fade-up">
+            <div class="tech-logo-wrap">
+                <img src="https://cdn.worldvectorlogo.com/logos/boomi-1.svg" alt="Boomi" class="tech-logo">
+            </div>
+            <h3>Boomi</h3>
+            <p>Cloud-native integration platform connecting applications, data, and devices across your entire ecosystem with low-code agility.</p>
+        </div>
+        <div class="tech-card fade-up">
+            <div class="tech-logo-wrap">
+                <img src="https://avatars.githubusercontent.com/u/46551529?s=280&v=4" alt="SAP Integration Suite" class="tech-logo">
+            </div>
+            <h3>SAP Integration Suite</h3>
+            <p>SAP Cloud Integration for intelligent enterprise processes, pre-built content packages, and robust hybrid integration scenarios.</p>
+        </div>
+        <div class="tech-card fade-up">
+            <div class="tech-logo-wrap">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcl4nb7bx7Jif1Nsup0Fdae7kzKFiXSto2uQ&s" alt="Apache Camel" class="tech-logo">
+            </div>
+            <h3>Apache Camel</h3>
+            <p>Open-source integration framework with enterprise integration patterns, powerful routing, and flexible mediation capabilities.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="services" id="services">
+    <div class="sec-header">
+        <span class="sec-tag">What We Do</span>
+        <h2 class="sec-title">Integration Services</h2>
+        <p class="sec-sub">End-to-end integration services tailored to your business — from strategy through implementation and ongoing support.</p>
+    </div>
+    <div class="services-grid">
+        <div class="svc-card fade-up">
+            <div class="svc-icon">🔌</div>
+            <h3>API Design &amp; Management</h3>
+            <p>Design, build, and govern RESTful and SOAP APIs with security, versioning, and lifecycle management built in from day one.</p>
+        </div>
+        <div class="svc-card fade-up">
+            <div class="svc-icon">🔄</div>
+            <h3>System-to-System Integration</h3>
+            <p>Seamlessly connect disparate enterprise applications — ERP, CRM, HRMS, SCM — eliminating data silos and manual handoffs.</p>
+        </div>
+        <div class="svc-card fade-up">
+            <div class="svc-icon">☁️</div>
+            <h3>Cloud &amp; Hybrid Integration</h3>
+            <p>Integrate on-premise systems with cloud platforms (AWS, Azure, GCP, Salesforce) using secure, scalable hybrid architectures.</p>
+        </div>
+        <div class="svc-card fade-up">
+            <div class="svc-icon">🏛️</div>
+            <h3>Legacy Modernization</h3>
+            <p>Wrap legacy applications with modern APIs and migrate to event-driven microservices architectures without disrupting operations.</p>
+        </div>
+        <div class="svc-card fade-up">
+            <div class="svc-icon">📦</div>
+            <h3>Data Integration &amp; ETL</h3>
+            <p>Real-time and batch data pipelines — transforming, cleansing, and routing data across systems with full auditability and traceability.</p>
+        </div>
+        <div class="svc-card fade-up">
+            <div class="svc-icon">🛡️</div>
+            <h3>Managed Support &amp; Monitoring</h3>
+            <p>24/7 monitoring, incident response, performance tuning, and managed services to keep your integrations running flawlessly.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section class="process" id="process">
+    <div class="sec-header">
+        <span class="sec-tag">Our Approach</span>
+        <h2 class="sec-title">How We Work</h2>
+        <p class="sec-sub">A structured, proven engagement model that delivers results quickly and reliably.</p>
+    </div>
+    <div class="process-steps">
+        <div class="p-step fade-up">
+            <div class="p-num">1</div>
+            <h3>Discover</h3>
+            <p>We map your systems, data flows, and integration challenges to build a clear picture of the landscape.</p>
+        </div>
+        <div class="p-step fade-up">
+            <div class="p-num">2</div>
+            <h3>Design</h3>
+            <p>Our architects design a scalable integration blueprint aligned to your business goals and technology stack.</p>
+        </div>
+        <div class="p-step fade-up">
+            <div class="p-num">3</div>
+            <h3>Build</h3>
+            <p>Certified engineers implement using best practices — CI/CD, automated testing, and full documentation.</p>
+        </div>
+        <div class="p-step fade-up">
+            <div class="p-num">4</div>
+            <h3>Operate</h3>
+            <p>We monitor live integrations, proactively resolve issues, and optimize performance continuously.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section class="projects" id="projects">
+    <div class="sec-header">
+        <span class="sec-tag">Case Studies</span>
+        <h2 class="sec-title">Featured Projects</h2>
+        <p class="sec-sub">Real-world integration transformations delivered for enterprises across industries.</p>
+    </div>
+    <div class="projects-grid">
+        <div class="proj-card fade-up">
+            <div class="proj-head">
+                <div class="proj-cat">Retail &amp; E-commerce</div>
+                <h3>Global Retail Chain</h3>
+            </div>
+            <div class="proj-body">
+                <p>Integrated multiple e-commerce platforms with ERP and CRM systems, enabling real-time inventory management and order processing across 500+ stores globally.</p>
+                <div class="proj-tags">
+                    <span class="tag">MuleSoft</span>
+                    <span class="tag">SAP</span>
+                    <span class="tag">Salesforce</span>
+                </div>
+            </div>
+        </div>
+        <div class="proj-card fade-up">
+            <div class="proj-head">
+                <div class="proj-cat">Healthcare</div>
+                <h3>Healthcare Provider Network</h3>
+            </div>
+            <div class="proj-body">
+                <p>Consolidated patient data from 15+ disparate systems into a unified platform, improving care coordination and reducing data retrieval time by 75%.</p>
+                <div class="proj-tags">
+                    <span class="tag">Boomi</span>
+                    <span class="tag">HL7</span>
+                    <span class="tag">FHIR</span>
+                </div>
+            </div>
+        </div>
+        <div class="proj-card fade-up">
+            <div class="proj-head">
+                <div class="proj-cat">Financial Services</div>
+                <h3>Banking Legacy Migration</h3>
+            </div>
+            <div class="proj-body">
+                <p>Modernized core banking systems to microservices architecture, cutting time-to-market for new products and reducing operational overhead by 40%.</p>
+                <div class="proj-tags">
+                    <span class="tag">Apache Camel</span>
+                    <span class="tag">SAP CI</span>
+                    <span class="tag">REST APIs</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about" id="about">
+    <div class="about-inner">
+        <div class="about-text">
+            <span class="sec-tag">About Aadvika</span>
+            <h2>Your Integration Partner for the Digital Age</h2>
+            <p>Aadvika Pvt Ltd is a specialized system integration consultancy focused on connecting enterprise applications, modernizing legacy systems, and enabling digital transformation through reliable, secure data flows.</p>
+            <p>Our certified professionals bring deep, cross-platform expertise — delivering integrations that are not just functional, but scalable and built for the long term.</p>
+            <div class="value-list">
+                <div class="v-item">
+                    <div class="v-check">✓</div>
+                    Certified across MuleSoft, Boomi, SAP &amp; Apache Camel
+                </div>
+                <div class="v-item">
+                    <div class="v-check">✓</div>
+                    Domain expertise across retail, healthcare, finance &amp; logistics
+                </div>
+                <div class="v-item">
+                    <div class="v-check">✓</div>
+                    Agile delivery with full transparency at every stage
+                </div>
+                <div class="v-item">
+                    <div class="v-check">✓</div>
+                    Post-go-live support and continuous optimization
+                </div>
+            </div>
+        </div>
+        <div class="about-stats">
+            <div class="a-stat fade-up">
+                <div class="num">150+</div>
+                <div class="lbl">Projects Delivered</div>
+            </div>
+            <div class="a-stat fade-up">
+                <div class="num">50+</div>
+                <div class="lbl">Enterprise Clients</div>
+            </div>
+            <div class="a-stat fade-up">
+                <div class="num">98%</div>
+                <div class="lbl">Client Satisfaction</div>
+            </div>
+            <div class="a-stat fade-up">
+                <div class="num">24/7</div>
+                <div class="lbl">Support Available</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact" id="contact">
+    <div class="contact-wrap">
+        <div class="sec-header">
+            <span class="sec-tag">Get In Touch</span>
+            <h2 class="sec-title">Let's Build Something Together</h2>
+            <p class="sec-sub">Tell us about your integration challenge and we'll respond within one business day.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="c-info fade-up">
+                <h3>Contact Information</h3>
+                <p>Reach out through any of the channels below, or fill in the form.</p>
+                <div class="c-item">
+                    <div class="c-icon">📧</div>
+                    <div>
+                        <strong>Email</strong>
+                        <span>contact@aadvika.in</span>
+                    </div>
+                </div>
+                <div class="c-item">
+                    <div class="c-icon">📞</div>
+                    <div>
+                        <strong>Phone</strong>
+                        <span>+91 99999 00000</span>
+                    </div>
+                </div>
+                <div class="c-item">
+                    <div class="c-icon">📍</div>
+                    <div>
+                        <strong>Location</strong>
+                        <span>Bangalore, Karnataka, India</span>
+                    </div>
+                </div>
+                <div class="c-item">
+                    <div class="c-icon">🕐</div>
+                    <div>
+                        <strong>Business Hours</strong>
+                        <span>Mon – Fri, 9:00 AM – 6:00 PM IST</span>
+                    </div>
+                </div>
+            </div>
+            <div class="c-form fade-up">
+                <h3>Send Us a Message</h3>
+                <p>Fill in your details and we'll be in touch shortly.</p>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="fg">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                        </div>
+                        <div class="fg">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="fg">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" placeholder="Your company name">
+                        </div>
+                        <div class="fg">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service…</option>
+                                <option>API Design &amp; Management</option>
+                                <option>System-to-System Integration</option>
+                                <option>Cloud &amp; Hybrid Integration</option>
+                                <option>Legacy Modernization</option>
+                                <option>Data Integration &amp; ETL</option>
+                                <option>Managed Support &amp; Monitoring</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fg">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Describe your integration challenge or project…" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message &rarr;</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <div class="footer-top">
+        <div class="f-brand">
+            <span class="logo-name">Aadvika Pvt Ltd</span>
+            <p>Specialized system integration consultancy connecting enterprises through MuleSoft, Boomi, SAP Integration Suite, and Apache Camel.</p>
+        </div>
+        <div class="f-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#services">API Management</a></li>
+                <li><a href="#services">System Integration</a></li>
+                <li><a href="#services">Cloud Integration</a></li>
+                <li><a href="#services">Legacy Modernization</a></li>
+                <li><a href="#services">ETL &amp; Data Integration</a></li>
+            </ul>
+        </div>
+        <div class="f-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Case Studies</a></li>
+                <li><a href="#technologies">Expertise</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 Aadvika Pvt Ltd. All rights reserved. &nbsp;|&nbsp;
+        <a href="mailto:contact@aadvika.in">contact@aadvika.in</a>
+    </div>
+</footer>
+
+<script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks   = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const t = document.querySelector(a.getAttribute('href'));
+            if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    // Scroll-triggered fade-in with stagger
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const delay = parseInt(entry.target.dataset.delay || 0) * 90;
+                setTimeout(() => entry.target.classList.add('visible'), delay);
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach((el, i) => {
+        el.dataset.delay = i % 5;
+        io.observe(el);
+    });
+
+    // Contact form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('.submit-btn');
+        const orig = btn.innerHTML;
+        btn.innerHTML = 'Message Sent ✓';
+        btn.style.background = 'linear-gradient(135deg, #059669, #10b981)';
+        btn.disabled = true;
+        setTimeout(() => {
+            btn.innerHTML = orig;
+            btn.style.background = '';
+            btn.disabled = false;
+            this.reset();
+        }, 4000);
+    });
+</script>
+</body>
+</html>
