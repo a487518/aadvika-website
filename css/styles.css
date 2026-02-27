@@ -258,30 +258,61 @@
 
         .diagram {
             position: relative;
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
+        }
+
+        /* Dashed connector lines */
+        .diagram::before {
+            content: '';
+            position: absolute;
+            top: 95px; bottom: 95px;
+            left: 50%;
+            width: 2px;
+            transform: translateX(-50%);
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 6px,
+                transparent 6px, transparent 12px
+            );
+            z-index: 0;
+        }
+
+        .diagram::after {
+            content: '';
+            position: absolute;
+            left: 95px; right: 95px;
+            top: 50%;
+            height: 2px;
+            transform: translateY(-50%);
+            background: repeating-linear-gradient(
+                to right,
+                rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 6px,
+                transparent 6px, transparent 12px
+            );
+            z-index: 0;
         }
 
         .d-center {
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 88px; height: 88px;
+            width: 100px; height: 100px;
             background: #fff;
-            border-radius: 22px;
+            border-radius: 24px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             box-shadow: 0 8px 32px rgba(0,0,0,0.22);
             z-index: 2;
-            gap: 3px;
+            gap: 4px;
         }
 
-        .d-center-icon { font-size: 1.9rem; }
+        .d-center-icon { font-size: 2rem; }
 
         .d-center-label {
-            font-size: 0.62rem;
+            font-size: 0.65rem;
             font-weight: 800;
             color: var(--navy);
             text-transform: uppercase;
@@ -290,21 +321,38 @@
 
         .d-node {
             position: absolute;
-            width: 60px; height: 60px;
-            background: rgba(255,255,255,0.14);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255,255,255,0.28);
-            border-radius: 16px;
+            width: 84px; height: 84px;
+            background: #fff;
+            border-radius: 20px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 1.55rem;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+            padding: 10px 8px 8px;
+            gap: 5px;
+            z-index: 1;
         }
 
-        .d-node:nth-child(2) { top: 4px; left: 50%; transform: translateX(-50%); animation: floatV 3.2s ease-in-out infinite 0s; }
-        .d-node:nth-child(3) { bottom: 4px; left: 50%; transform: translateX(-50%); animation: floatV 3.2s ease-in-out infinite 0.8s; }
-        .d-node:nth-child(4) { left: 4px; top: 50%; transform: translateY(-50%); animation: floatH 3.2s ease-in-out infinite 1.6s; }
-        .d-node:nth-child(5) { right: 4px; top: 50%; transform: translateY(-50%); animation: floatH 3.2s ease-in-out infinite 2.4s; }
+        .d-node img {
+            max-width: 54px;
+            max-height: 42px;
+            object-fit: contain;
+        }
+
+        .d-node span {
+            font-size: 0.56rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-align: center;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .d-node-top    { top: 0; left: 50%; transform: translateX(-50%); animation: floatV 3.2s ease-in-out infinite 0s; }
+        .d-node-bottom { bottom: 0; left: 50%; transform: translateX(-50%); animation: floatV 3.2s ease-in-out infinite 0.8s; }
+        .d-node-left   { left: 0; top: 50%; transform: translateY(-50%); animation: floatH 3.2s ease-in-out infinite 1.6s; }
+        .d-node-right  { right: 0; top: 50%; transform: translateY(-50%); animation: floatH 3.2s ease-in-out infinite 2.4s; }
 
         @keyframes floatV {
             0%,100% { transform: translateX(-50%) translateY(0); }
