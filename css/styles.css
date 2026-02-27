@@ -624,6 +624,41 @@
             box-shadow: var(--card-shadow-hover);
         }
 
+        .proj-card--highlight {
+            border-color: #bfdbfe;
+        }
+
+        .proj-card--highlight .proj-head {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 40%, #2563eb 100%);
+            position: relative;
+        }
+
+        .proj-card--highlight .proj-head::after {
+            content: 'Built by Aadvika';
+            position: absolute;
+            top: 1rem; right: 1.2rem;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: #fff;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 0.22rem 0.65rem;
+            border-radius: 50px;
+        }
+
+        .proj-highlight {
+            font-size: 0.88rem !important;
+            color: var(--blue) !important;
+            background: #eff6ff;
+            border-left: 3px solid var(--accent);
+            padding: 0.65rem 0.9rem !important;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.2rem !important;
+            line-height: 1.55 !important;
+        }
+
         .proj-head {
             background: var(--gradient);
             color: #fff;
